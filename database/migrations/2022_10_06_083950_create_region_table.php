@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOrderMTable extends Migration
+class CreateRegionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateOrderMTable extends Migration
      */
     public function up()
     {
-        Schema::create('manejo_pedido', function(Blueprint $table){
-            $table->unsignedBigInteger('id_pedido');
-            $table->unsignedBigInteger('id_videojuego');
+        Schema::create('region', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
             $table->timestamps();
-
-            $table->foreign('id_pedido')->references('id')->on('pedido');
-            $table->foreign('id_videojuego')->references('id')->on('videojuego');
         });
     }
 
@@ -30,6 +27,6 @@ class CreateOrderMTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('region');
     }
 }

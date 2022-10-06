@@ -451,3 +451,714 @@ Did you mean one of these?
 #31 C:\\laragon\\www\\videogames\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #32 {main}
 "} 
+[2022-10-06 09:40:14] local.ERROR: Command "migration" is not defined.
+
+Did you mean one of these?
+    make:migration
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"migration\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status at C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php:718)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('migration')
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-10-06 09:41:21] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'user_id' doesn't exist in table (SQL: alter table `empleado` add constraint `empleado_user_id_foreign` foreign key (`user_id`) references `users` (`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'user_id' doesn't exist in table (SQL: alter table `empleado` add constraint `empleado_user_id_foreign` foreign key (`user_id`) references `users` (`id`)) at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:712)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `em...', Array, Object(Closure))
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `em...', Array, Object(Closure))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `em...')
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('empleado', Object(Closure))
+#6 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084538_create_employer_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateEmployerTable->up()
+#8 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateEmployerTable), 'up')
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateEmployerTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'user_id' doesn't exist in table at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:501)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(501): PDOStatement->execute()
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `em...', Array)
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `em...', Array, Object(Closure))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `em...', Array, Object(Closure))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `em...')
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('empleado', Object(Closure))
+#8 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084538_create_employer_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateEmployerTable->up()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateEmployerTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateEmployerTable), 'up')
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2022-10-06 19:47:44] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'user_id' doesn't exist in table (SQL: alter table `empleado` add constraint `empleado_user_id_foreign` foreign key (`user_id`) references `users` (`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'user_id' doesn't exist in table (SQL: alter table `empleado` add constraint `empleado_user_id_foreign` foreign key (`user_id`) references `users` (`id`)) at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:712)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `em...', Array, Object(Closure))
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `em...', Array, Object(Closure))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `em...')
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('empleado', Object(Closure))
+#6 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084538_create_employer_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateEmployerTable->up()
+#8 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateEmployerTable), 'up')
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateEmployerTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'user_id' doesn't exist in table at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:501)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(501): PDOStatement->execute()
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `em...', Array)
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `em...', Array, Object(Closure))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `em...', Array, Object(Closure))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `em...')
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('empleado', Object(Closure))
+#8 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084538_create_employer_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateEmployerTable->up()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateEmployerTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateEmployerTable), 'up')
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2022-10-06 19:48:40] local.ERROR: Command "make:rollback" is not defined.
+
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    migrate:rollback {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:rollback\" is not defined.
+
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    migrate:rollback at C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php:718)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('make:rollback')
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-10-06 19:53:39] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'user_id' doesn't exist in table (SQL: alter table `empleado` add constraint `empleado_user_id_foreign` foreign key (`user_id`) references `usuario` (`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'user_id' doesn't exist in table (SQL: alter table `empleado` add constraint `empleado_user_id_foreign` foreign key (`user_id`) references `usuario` (`id`)) at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:712)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `em...', Array, Object(Closure))
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `em...', Array, Object(Closure))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `em...')
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('empleado', Object(Closure))
+#6 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084538_create_employer_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateEmployerTable->up()
+#8 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateEmployerTable), 'up')
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateEmployerTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'user_id' doesn't exist in table at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:501)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(501): PDOStatement->execute()
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `em...', Array)
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `em...', Array, Object(Closure))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `em...', Array, Object(Closure))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `em...')
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('empleado', Object(Closure))
+#8 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084538_create_employer_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateEmployerTable->up()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateEmployerTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateEmployerTable), 'up')
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2022-10-06 19:54:40] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `pedido` add constraint `pedido_id_client_foreign` foreign key (`id_client`) references `cliente` (`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `pedido` add constraint `pedido_id_client_foreign` foreign key (`id_client`) references `cliente` (`id`)) at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:712)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `pe...', Array, Object(Closure))
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `pe...', Array, Object(Closure))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `pe...')
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('pedido', Object(Closure))
+#6 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084707_create_order_table.php(25): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateOrderTable->up()
+#8 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateOrderTable), 'up')
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateOrderTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+
+[previous exception] [object] (PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:501)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(501): PDOStatement->execute()
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `pe...', Array)
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `pe...', Array, Object(Closure))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `pe...', Array, Object(Closure))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `pe...')
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('pedido', Object(Closure))
+#8 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084707_create_order_table.php(25): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateOrderTable->up()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateOrderTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateOrderTable), 'up')
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2022-10-06 19:56:19] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `videojuego` add constraint `videojuego_id_region_foreign` foreign key (`id_region`) references `region` (`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `videojuego` add constraint `videojuego_id_region_foreign` foreign key (`id_region`) references `region` (`id`)) at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:712)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `vi...', Array, Object(Closure))
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `vi...', Array, Object(Closure))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `vi...')
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('videojuego', Object(Closure))
+#6 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084746_create_videogame_table.php(36): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateVideogameTable->up()
+#8 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateVideogameTable), 'up')
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateVideogameTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+
+[previous exception] [object] (PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:501)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(501): PDOStatement->execute()
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `vi...', Array)
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `vi...', Array, Object(Closure))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `vi...', Array, Object(Closure))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `vi...')
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('videojuego', Object(Closure))
+#8 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084746_create_videogame_table.php(36): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateVideogameTable->up()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateVideogameTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateVideogameTable), 'up')
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2022-10-06 19:57:29] local.ERROR: Command "make:rollback" is not defined.
+
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    migrate:rollback {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:rollback\" is not defined.
+
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    migrate:rollback at C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php:718)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('make:rollback')
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-10-06 19:59:48] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `videojuego` add constraint `videojuego_id_genero_foreign` foreign key (`id_genero`) references `genero` (`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `videojuego` add constraint `videojuego_id_genero_foreign` foreign key (`id_genero`) references `genero` (`id`)) at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:712)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `vi...', Array, Object(Closure))
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `vi...', Array, Object(Closure))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `vi...')
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('videojuego', Object(Closure))
+#6 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084746_create_videogame_table.php(36): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateVideogameTable->up()
+#8 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateVideogameTable), 'up')
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateVideogameTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+
+[previous exception] [object] (PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:501)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(501): PDOStatement->execute()
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `vi...', Array)
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('alter table `vi...', Array, Object(Closure))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('alter table `vi...', Array, Object(Closure))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `vi...')
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(227): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('videojuego', Object(Closure))
+#8 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084746_create_videogame_table.php(36): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateVideogameTable->up()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateVideogameTable), 'up')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateVideogameTable), 'up')
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\laragon\\\\www\\\\...', 1, false)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(86): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(98): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2022-10-06 20:00:21] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `region`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `region`) at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:712)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(253): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->dropIfExists('region')
+#6 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_083950_create_region_table.php(30): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateRegionTable->down()
+#8 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateRegionTable), 'down')
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateRegionTable), 'down')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(286): Illuminate\\Database\\Migrations\\Migrator->runDown('C:\\\\laragon\\\\www\\\\...', Object(stdClass), false)
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(236): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\RollbackCommand.php(62): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\RollbackCommand.php(65): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:501)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(501): PDOStatement->execute()
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('drop table if e...', Array)
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('drop table if e...')
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(253): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->dropIfExists('region')
+#8 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_083950_create_region_table.php(30): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateRegionTable->down()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateRegionTable), 'down')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateRegionTable), 'down')
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(286): Illuminate\\Database\\Migrations\\Migrator->runDown('C:\\\\laragon\\\\www\\\\...', Object(stdClass), false)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(236): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\RollbackCommand.php(62): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\RollbackCommand.php(65): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2022-10-06 20:04:13] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `videojuego`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `videojuego`) at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:712)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(253): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->dropIfExists('videojuego')
+#6 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084746_create_videogame_table.php(46): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateVideogameTable->down()
+#8 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateVideogameTable), 'down')
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateVideogameTable), 'down')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(286): Illuminate\\Database\\Migrations\\Migrator->runDown('C:\\\\laragon\\\\www\\\\...', Object(stdClass), false)
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(236): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\RollbackCommand.php(62): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\RollbackCommand.php(65): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails at C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:501)
+[stacktrace]
+#0 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(501): PDOStatement->execute()
+#1 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('drop table if e...', Array)
+#2 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#3 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(502): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#4 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('drop table if e...')
+#5 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(253): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->dropIfExists('videojuego')
+#8 C:\\laragon\\www\\videogames_laravel\\database\\migrations\\2022_10_06_084746_create_videogame_table.php(46): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#9 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateVideogameTable->down()
+#10 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateVideogameTable), 'down')
+#11 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateVideogameTable), 'down')
+#13 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(286): Illuminate\\Database\\Migrations\\Migrator->runDown('C:\\\\laragon\\\\www\\\\...', Object(stdClass), false)
+#14 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(236): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#15 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\RollbackCommand.php(62): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#16 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#17 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\RollbackCommand.php(65): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#18 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#19 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#24 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(1028): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\laragon\\www\\videogames_laravel\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\laragon\\www\\videogames_laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\laragon\\www\\videogames_laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 

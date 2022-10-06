@@ -21,7 +21,7 @@ class CreateOrderTable extends Migration
             $table->string('estatus', 15);
             $table->timestamps();
 
-            $table->foreign('id_client')->references('id')->on('cliente');
+            $table->foreign('id_client')->references('id_user')->on('cliente');
         });
     }
 

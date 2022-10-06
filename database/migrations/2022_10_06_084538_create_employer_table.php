@@ -19,7 +19,7 @@ class CreateEmployerTable extends Migration
             $table->date('fecha_contratacion');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('id_user')->references('id')->on('usuario');
         });
     }
 

@@ -17,6 +17,8 @@ class CreateClientTable extends Migration
             $table->unsignedBigInteger('id_user');
             $table->float('saldo', 8, 2);
             $table->timestamps();
+
+            $table->foreign('id_user')->references('id')->on('usuario');
         });
     }
 
