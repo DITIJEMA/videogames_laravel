@@ -13,7 +13,7 @@ class CreateVideogameTable extends Migration
      */
     public function up()
     {
-        Schema::create('videogame', function (Blueprint $table) {
+        Schema::create('videogames', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 30);
             $table->string('desarrolladora', 30);
@@ -43,6 +43,6 @@ class CreateVideogameTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videogame');
+        Schema::dropIfExists('videogames');
     }
 }
