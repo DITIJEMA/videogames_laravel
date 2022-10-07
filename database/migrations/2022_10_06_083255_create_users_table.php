@@ -31,9 +31,9 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreign('id_type_user')->references('id')->on('tipo_empleado');
-            $table->foreign('id_state')->references('id')->on('estados');
-            $table->foreign('id_status')->references('id')->on('estatus');
+            $table->foreign('id_type_user')->references('id')->on('type__employees');
+            $table->foreign('id_state')->references('id')->on('states');
+            $table->foreign('id_status')->references('id')->on('statuses');
         });
     }
 

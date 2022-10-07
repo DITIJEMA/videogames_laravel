@@ -13,13 +13,13 @@ class CreateOrderMTable extends Migration
      */
     public function up()
     {
-        Schema::create('manejo_pedido', function(Blueprint $table){
+        Schema::create('order_m', function(Blueprint $table){
             $table->unsignedBigInteger('id_pedido');
             $table->unsignedBigInteger('id_videojuego');
             $table->timestamps();
 
             $table->foreign('id_pedido')->references('id')->on('pedido');
-            $table->foreign('id_videojuego')->references('id')->on('videojuego');
+            $table->foreign('id_videojuego')->references('id')->on('videogame');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateOrderMTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('order_m');
     }
 }

@@ -13,7 +13,7 @@ class CreateVideogameTable extends Migration
      */
     public function up()
     {
-        Schema::create('videojuego', function (Blueprint $table) {
+        Schema::create('videogame', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 30);
             $table->string('desarrolladora', 30);
@@ -29,10 +29,10 @@ class CreateVideogameTable extends Migration
             $table->unsignedBigInteger('id_consola');
             $table->timestamps();
 
-            $table->foreign('id_clasificacion')->references('id')->on('clasificacion');
-            $table->foreign('id_region')->references('id')->on('region');
-            $table->foreign('id_genero')->references('id')->on('genero');
-            $table->foreign('id_consola')->references('id')->on('consola');
+            $table->foreign('id_clasificacion')->references('id')->on('classifications');
+            $table->foreign('id_region')->references('id')->on('regions');
+            $table->foreign('id_genero')->references('id')->on('genders');
+            $table->foreign('id_consola')->references('id')->on('consoles');
         });
     }
 
@@ -43,6 +43,6 @@ class CreateVideogameTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videojuego');
+        Schema::dropIfExists('videogame');
     }
 }

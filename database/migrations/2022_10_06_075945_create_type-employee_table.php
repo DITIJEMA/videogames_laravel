@@ -13,7 +13,7 @@ class CreateTypeEmployeeTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_empleado', function(Blueprint $table){
+        Schema::create('type__employees', function(Blueprint $table){
             $table->id();
             $table->string('tipo', 15);
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateTypeEmployeeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_empleado');
+        Schema::dropIfExists('type__employees');
     }
 }

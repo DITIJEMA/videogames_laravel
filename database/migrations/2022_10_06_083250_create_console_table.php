@@ -13,7 +13,7 @@ class CreateConsoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('consola', function (Blueprint $table) {
+        Schema::create('consoles', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 15);
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateConsoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('console');
+        Schema::dropIfExists('consoles');
     }
 }
