@@ -13,7 +13,7 @@ class CreateOrderTable extends Migration
      */
     public function up()
     {
-        Schema::create('pedido', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_client');
             $table->float('subtotal', 10, 2)->nullable();
@@ -21,7 +21,7 @@ class CreateOrderTable extends Migration
             $table->string('estatus', 15);
             $table->timestamps();
 
-            $table->foreign('id_client')->references('id_user')->on('cliente');
+            $table->foreign('id_client')->references('id_user')->on('clients');
         });
     }
 
@@ -32,6 +32,6 @@ class CreateOrderTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pedido');
+        Schema::dropIfExists('orders');
     }
 }

@@ -18,8 +18,8 @@ class CreateOrderMTable extends Migration
             $table->unsignedBigInteger('id_videojuego');
             $table->timestamps();
 
-            $table->foreign('id_pedido')->references('id')->on('pedido');
-            $table->foreign('id_videojuego')->references('id')->on('videogame');
+            $table->foreign('id_pedido')->references('id')->on('orders');
+            $table->foreign('id_videojuego')->references('id')->on('videogames');
         });
     }
 
