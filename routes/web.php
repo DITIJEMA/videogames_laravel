@@ -53,3 +53,7 @@ Route::resource('user', UserController::class);
 Route::resource('videogame', VideogameController::class);
 Route::resource('gender', GenderController::class);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
